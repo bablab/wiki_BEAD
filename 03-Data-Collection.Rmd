@@ -1,0 +1,13 @@
+# Data Collection
+
+## Location
+All research is online using REDCap.
+
+## Data Storage
+- The questionnaire data is stored in REDCap.
+- Scripts and Processed Data is stored in Box.
+
+
+
+
+
