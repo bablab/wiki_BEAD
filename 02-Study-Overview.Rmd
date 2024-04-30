@@ -3,6 +3,7 @@
 
 ## Study Details
 - TO BE ADDED
+
 ## Questionnaires
 
 - **College Demographics**
@@ -23,10 +24,18 @@
   
 - **Interoceptive Confusion Questionnaire (ICQ)**
 
-
 - **CES-D**
 
 - **Puberty & Contraceptive Questions**
+  - Clare McCann
+
+- **Questionnaire of Unpredictability in Childhood (QUIC)**
+
+- **Emotions as a Child Questionnaire (EAC)**
+
+- **Toronto Alexithymia Scale (TAS-20)**
+
+- **State Trait Anxiety Inventory (Trait; STAI-T)**
 
 ## Funding
 N/A
