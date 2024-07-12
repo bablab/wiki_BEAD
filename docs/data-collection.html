@@ -120,7 +120,9 @@
 <h1><span class="header-section-number">Section 4</span> Data Collection<a href="data-collection.html#data-collection" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="location" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Location<a href="data-collection.html#location" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>All research is online using REDCap.</p>
+<ul>
+<li>All research is online using REDCap.</li>
+</ul>
 </div>
 <div id="data-storage" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Data Storage<a href="data-collection.html#data-storage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -131,17 +133,21 @@
 </div>
 <div id="data-scoring" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Data Scoring<a href="data-collection.html#data-scoring" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Data Scoring R-script: <a href="/docs/BEAD_Scoring.R">Link</a>
-- All Data scoring was completed in R.
-- Mean imputation is completed for all missing values. When a sub-scale is present, the mean imputed value is based on the sub-scale questions only.
-- The scored data spreadsheet includes columns that report percent on “prefer not to answer” responses for each questionnaire, as well as a check if all values for a questionnaire were the same (both checks for inattention).
-- A separate spreadsheet reports the internal reliability (cronbach’s alpha) and other questionnaire characteristic measures.</p>
-<p><strong>Scoring Notes:</strong>
-- <strong>ICQ</strong>
-- All items are responded to on a scale from 1 (Does not describe me) to 5 (Describes me very well).
-- Reverse Scored Items: 4, 9, 12, 14, 16, 18, 19 marked with * are reverse scored (5 = 1, 4 = 2, 2 = 4, 1 = 5).
-- An interoceptive confusion total score, ranging between 20 and 100, was calculated by summing all responses following reverse scoring (Brewer et al., 2016).</p>
 <ul>
+<li><p><strong>Data Scoring R-script:</strong> <a href="https://github.com/bablab/wiki_BEAD/blob/main/docs/BEAD_Scoring.R">Link</a></p></li>
+<li><p>All Data scoring was completed in R.</p></li>
+<li><p>Mean imputation is completed for all missing values. When a sub-scale is present, the mean imputed value is based on the sub-scale questions only.</p></li>
+<li><p>The scored data spreadsheet includes columns that report percent on “prefer not to answer” responses for each questionnaire, as well as a check if all values for a questionnaire were the same (both checks for inattention).</p></li>
+<li><p>A separate spreadsheet reports the internal reliability (cronbach’s alpha) and other questionnaire characteristic measures.</p></li>
+</ul>
+<p><strong>Scoring Notes:</strong></p>
+<ul>
+<li><strong>ICQ</strong>
+<ul>
+<li>All items are responded to on a scale from 1 (Does not describe me) to 5 (Describes me very well).</li>
+<li>Reverse Scored Items: 4, 9, 12, 14, 16, 18, 19 marked with * are reverse scored (5 = 1, 4 = 2, 2 = 4, 1 = 5).</li>
+<li>An interoceptive confusion total score, ranging between 20 and 100, was calculated by summing all responses following reverse scoring (Brewer et al., 2016).</li>
+</ul></li>
 <li><strong>EAC</strong>
 <ul>
 <li>For EAC we collapsed across three negative emotions (angry/fearful/sad) in the questions – only 15 items total then</li>

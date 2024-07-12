@@ -1,20 +1,26 @@
 # Data Collection
 
 ## Location
-All research is online using REDCap.
+- All research is online using REDCap.
 
 ## Data Storage
 - The questionnaire data is stored in REDCap.
 - Scripts and Processed Data is stored in Box.
 
 ## Data Scoring
-Data Scoring R-script: [Link](/docs/BEAD_Scoring.R)
+
+- **Data Scoring R-script:** [Link](https://github.com/bablab/wiki_BEAD/blob/main/docs/BEAD_Scoring.R)
+
 - All Data scoring was completed in R.
+
 - Mean imputation is completed for all missing values. When a sub-scale is present, the mean imputed value is based on the sub-scale questions only.
+
 - The scored data spreadsheet includes columns that report percent on "prefer not to answer" responses for each questionnaire, as well as a check if all values for a questionnaire were the same (both checks for inattention).
+
 - A separate spreadsheet reports the internal reliability (cronbach's alpha) and other questionnaire characteristic measures. 
 
 **Scoring Notes:**
+
 - **ICQ**
   - All items are responded to on a scale from 1 (Does not describe me) to 5 (Describes me very well). 
   - Reverse Scored Items: 4, 9, 12, 14, 16, 18, 19 marked with * are reverse scored (5 = 1, 4 = 2, 2 = 4, 1 = 5). 
