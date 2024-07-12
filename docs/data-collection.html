@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 4 Data Collection | Body and Emotion Awareness Differences (BEAD)</title>
   <meta name="description" content="iSoM Study" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 4 Data Collection | Body and Emotion Awareness Differences (BEAD)" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Paul W. Savoca, Eddie Navarro, &amp; Bridget L. Callaghan" />
 
 
-<meta name="date" content="2024-04-30" />
+<meta name="date" content="2024-07-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,6 +55,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -89,6 +93,7 @@
 <ul>
 <li class="chapter" data-level="4.1" data-path="data-collection.html"><a href="data-collection.html#location"><i class="fa fa-check"></i><b>4.1</b> Location</a></li>
 <li class="chapter" data-level="4.2" data-path="data-collection.html"><a href="data-collection.html#data-storage"><i class="fa fa-check"></i><b>4.2</b> Data Storage</a></li>
+<li class="chapter" data-level="4.3" data-path="data-collection.html"><a href="data-collection.html#data-scoring"><i class="fa fa-check"></i><b>4.3</b> Data Scoring</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://brainandbodylab.psych.ucla.edu/" target="blank">BABLab at UCLA</a></li>
@@ -122,6 +127,102 @@
 <ul>
 <li>The questionnaire data is stored in REDCap.</li>
 <li>Scripts and Processed Data is stored in Box.</li>
+</ul>
+</div>
+<div id="data-scoring" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Data Scoring<a href="data-collection.html#data-scoring" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Data Scoring R-script: <a href="/docs/BEAD_Scoring.R">Link</a>
+- All Data scoring was completed in R.
+- Mean imputation is completed for all missing values. When a sub-scale is present, the mean imputed value is based on the sub-scale questions only.
+- The scored data spreadsheet includes columns that report percent on “prefer not to answer” responses for each questionnaire, as well as a check if all values for a questionnaire were the same (both checks for inattention).
+- A separate spreadsheet reports the internal reliability (cronbach’s alpha) and other questionnaire characteristic measures.</p>
+<p><strong>Scoring Notes:</strong>
+- <strong>ICQ</strong>
+- All items are responded to on a scale from 1 (Does not describe me) to 5 (Describes me very well).
+- Reverse Scored Items: 4, 9, 12, 14, 16, 18, 19 marked with * are reverse scored (5 = 1, 4 = 2, 2 = 4, 1 = 5).
+- An interoceptive confusion total score, ranging between 20 and 100, was calculated by summing all responses following reverse scoring (Brewer et al., 2016).</p>
+<ul>
+<li><strong>EAC</strong>
+<ul>
+<li>For EAC we collapsed across three negative emotions (angry/fearful/sad) in the questions – only 15 items total then</li>
+<li>Two subscores are calculated based on Guo et al., 2017 Factor Analysis (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6218930/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6218930/</a>)</li>
+<li>Supportive Subscale - Items: 1, 3, 6, 7, 10, 11, 12, 14R, 15</li>
+<li>Unsupportive Subscale - Items: 2, 4, 5, 8, 9, 13</li>
+</ul></li>
+<li><strong>CTQ</strong>
+<ul>
+<li>A Cumulative Trauma Score is calculated for our CTQ, which is a sum of the perceived impact of the 6-traumas asked about.</li>
+<li>Reference for scoring procedure: Ju, T., Naliboff, B. D., Shih, W., Presson, A. P., Liu, C., Gupta, A., Mayer, E. A., &amp; Chang, L. (2020). Risk and Protective Factors Related to Early Adverse Life Events in Irritable Bowel Syndrome. Journal of Clinical Gastroenterology, 54(1), 63–69. <a href="https://doi.org/10.1097/MCG.0000000000001153" class="uri">https://doi.org/10.1097/MCG.0000000000001153</a></li>
+</ul></li>
+<li><strong>MAIA-2</strong>
+<ul>
+<li><ol style="list-style-type: decimal">
+<li>Noticing: Awareness of uncomfortable, comfortable, and neutral body sensations</li>
+</ol>
+<ul>
+<li>Q1______ + Q2______ + Q3______ + Q4______ / 4 = ___________</li>
+</ul></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li>Not-Distracting: Tendency not to ignore or distract oneself from sensations of pain or discomfort</li>
+</ol>
+<ul>
+<li>Q5(R)____ + Q6(R)____+ Q7(R)____+ Q8(R)____+Q9(R)____+Q10(R) / 6 = ___________</li>
+</ul></li>
+<li><ol start="3" style="list-style-type: decimal">
+<li>Not-Worrying: Tendency not to worry or experience emotional distress with sensations of pain or discomfort</li>
+</ol>
+<ul>
+<li>Q11(R)______ + Q12(R)______ + Q13______ + Q14______ + Q15 (R) / 5 = ___________</li>
+</ul></li>
+<li><ol start="4" style="list-style-type: decimal">
+<li>Attention Regulation: Ability to sustain and control attention to body sensations</li>
+</ol>
+<ul>
+<li>Q16_____ + Q17_____ + Q18_____ + Q19_____ + Q20_____ + Q21_____ + Q22_____ / 7 = ________</li>
+</ul></li>
+<li><ol start="5" style="list-style-type: decimal">
+<li>Emotional Awareness: Awareness of the connection between body sensations and emotional states</li>
+</ol>
+<ul>
+<li>Q23_____ + Q24_____ + Q25_____ + Q26_____ + Q27_____ / 5 = ___________</li>
+</ul></li>
+<li><ol start="6" style="list-style-type: decimal">
+<li>Self-Regulation: Ability to regulate distress by attention to body sensations</li>
+</ol>
+<ul>
+<li>Q28_____ + Q29_____ + Q30_____ + Q31_____ / 4= ___________</li>
+</ul></li>
+<li><ol start="7" style="list-style-type: decimal">
+<li>Body Listening: Active listening to the body for insight</li>
+</ol>
+<ul>
+<li>Q32_____ + Q33_____ + Q34_____ / 3= ___________</li>
+</ul></li>
+<li><ol start="8" style="list-style-type: decimal">
+<li>Trusting: Experience of one’s body as safe and trustworthy</li>
+</ol>
+<ul>
+<li>Q35_____ + Q36_____ + Q37_____ / 3= ___________</li>
+</ul></li>
+<li>Note: (R): reverse-score (5 – x) items 5, 6, 7, 8, 9 and 10 on Not-Distracting, and items 11, 12 and 15 on NotWorrying.</li>
+<li>No Total Score!</li>
+</ul></li>
+<li><strong>QUIC</strong>
+<ul>
+<li>Parental monitoring and involvement = 1R + 3R + 4R + 5R + 6R + 7R + 9R + 10R + 14R</li>
+<li>Parental predictability = 2 + 8R + 11 + 12 + 15R + 16 + 17R + 31 + 32 + 33 + 34 + 35</li>
+<li>Parental environment = 18 + 19 + 21 + 22 + 28R + 29 + 30</li>
+<li>Physical environment = 13 + 20 + 26 + 27 + 36R + 37 + 38</li>
+<li>Safety and security = 23 + 24 + 25</li>
+<li>Overall = Sum of all sub-scales.</li>
+</ul></li>
+<li><strong>TAS-20</strong>
+<ul>
+<li>Difficulty Describing Feelings sub-scale. 5 items – 2, 4r, 11, 12, 17.</li>
+<li>Difficulty Identifying Feeling sub-scale. 7 items – 1, 3, 6, 7, 9, 13, 14.</li>
+<li>Externally-Oriented Thinking sub-scale items – 5r, 8, 10r, 15, 16, 18r, 19r, 20.</li>
+<li>Total Score: Sum of sub-scales</li>
+</ul></li>
 </ul>
 
 </div>

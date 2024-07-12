@@ -7,6 +7,64 @@ All research is online using REDCap.
 - The questionnaire data is stored in REDCap.
 - Scripts and Processed Data is stored in Box.
 
+## Data Scoring
+Data Scoring R-script: [Link](/docs/BEAD_Scoring.R)
+- All Data scoring was completed in R.
+- Mean imputation is completed for all missing values. When a sub-scale is present, the mean imputed value is based on the sub-scale questions only.
+- The scored data spreadsheet includes columns that report percent on "prefer not to answer" responses for each questionnaire, as well as a check if all values for a questionnaire were the same (both checks for inattention).
+- A separate spreadsheet reports the internal reliability (cronbach's alpha) and other questionnaire characteristic measures. 
+
+**Scoring Notes:**
+- **ICQ**
+  - All items are responded to on a scale from 1 (Does not describe me) to 5 (Describes me very well). 
+  - Reverse Scored Items: 4, 9, 12, 14, 16, 18, 19 marked with * are reverse scored (5 = 1, 4 = 2, 2 = 4, 1 = 5). 
+  - An interoceptive confusion total score, ranging between 20 and 100, was calculated by summing all responses following reverse scoring (Brewer et al., 2016).
+  
+- **EAC**
+  - For EAC we collapsed across three negative emotions (angry/fearful/sad) in the questions -- only 15 items total then
+  - Two subscores are calculated based on Guo et al., 2017 Factor Analysis (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6218930/)
+  - Supportive Subscale - Items: 1, 3, 6, 7, 10, 11, 12, 14R, 15
+  - Unsupportive Subscale - Items: 2, 4, 5, 8, 9, 13
+
+- **CTQ**
+  - A Cumulative Trauma Score is calculated for our CTQ, which is a sum of the perceived impact of the 6-traumas asked about.
+  - Reference for scoring procedure: Ju, T., Naliboff, B. D., Shih, W., Presson, A. P., Liu, C., Gupta, A., Mayer, E. A., & Chang, L. (2020). Risk and Protective Factors Related to Early Adverse Life Events in Irritable Bowel Syndrome. Journal of Clinical Gastroenterology, 54(1), 63–69. https://doi.org/10.1097/MCG.0000000000001153
+  
+- **MAIA-2**
+  - 1. Noticing: Awareness of uncomfortable, comfortable, and neutral body sensations
+    - Q1______ + Q2______ + Q3______ + Q4______ / 4 = ___________
+  - 2. Not-Distracting: Tendency not to ignore or distract oneself from sensations of pain or discomfort
+    - Q5(R)____ + Q6(R)____+ Q7(R)____+ Q8(R)____+Q9(R)____+Q10(R) / 6 = ___________
+  - 3. Not-Worrying: Tendency not to worry or experience emotional distress with sensations of pain or discomfort
+    - Q11(R)______ + Q12(R)______ + Q13______ + Q14______ + Q15 (R) / 5 = ___________
+  - 4. Attention Regulation: Ability to sustain and control attention to body sensations
+    - Q16_____ + Q17_____ + Q18_____ + Q19_____ + Q20_____ + Q21_____ + Q22_____ / 7 = ________
+  - 5. Emotional Awareness: Awareness of the connection between body sensations and emotional states
+    - Q23_____ + Q24_____ + Q25_____ + Q26_____ + Q27_____ / 5 = ___________
+  - 6. Self-Regulation: Ability to regulate distress by attention to body sensations
+    - Q28_____ + Q29_____ + Q30_____ + Q31_____ / 4= ___________
+  - 7. Body Listening: Active listening to the body for insight
+    - Q32_____ + Q33_____ + Q34_____ / 3= ___________
+  - 8. Trusting: Experience of one’s body as safe and trustworthy
+    - Q35_____ + Q36_____ + Q37_____ / 3= ___________
+  - Note: (R): reverse-score (5 – x) items 5, 6, 7, 8, 9 and 10 on Not-Distracting, and items 11, 12 and 15 on NotWorrying.
+  - No Total Score!
+
+- **QUIC**
+  - Parental monitoring and involvement = 1R + 3R + 4R + 5R + 6R + 7R + 9R + 10R + 14R
+  - Parental predictability = 2 + 8R + 11 + 12 + 15R + 16 + 17R + 31 + 32 + 33 + 34 + 35
+  - Parental environment = 18 + 19 + 21 + 22 + 28R + 29 + 30
+  - Physical environment = 13 + 20 + 26 + 27 + 36R + 37 + 38
+  - Safety and security = 23 + 24 + 25
+  - Overall = Sum of all sub-scales.
+  
+- **TAS-20**
+  - Difficulty Describing Feelings sub-scale.  5 items – 2, 4r, 11, 12, 17.
+  - Difficulty Identifying Feeling sub-scale. 7 items – 1, 3, 6, 7, 9, 13, 14.
+  - Externally-Oriented Thinking sub-scale items – 5r, 8, 10r, 15, 16, 18r, 19r, 20.
+  - Total Score: Sum of sub-scales
+
+
 
 
 
